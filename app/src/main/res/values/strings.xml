@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">e-contact</string>
+    <string name="title_activity_main">Apps</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Next"></string>
+    <string name="title_activity_sub">SubActivity</string>
+    <string name="all_issues">All issues</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drower_open">Open</string>
+    <string name="drower_close">Close</string>
+
+    <string name="title">Home organization</string>
+    <string name="created">Created</string>
+    <string name="unknown">unknown</string>
+    <string name="registered">Registered</string>
+    <string name="due_date">Due date</string>
+    <string name="in_progress">in progress</string>
+    <string name="responsible">Responsible</string>
+    <string name="responsible_info">Дніпропетровський МВК</string>
+    <string name="waiting">waiting</string>
+    <string name="completed">completed</string>
+
+    <string name="decree">DECREE № CE-1257218</string>
+    <string name="description">Open the hatch (near the billboard), turning the area on 18 and 19 trams at Prospect Mira with the Donetsk highway</string>
+    <string name="links_string">Зроблено з любов\'ю\n <a href="http://www.cleverfinger.com.au/user-guide/" target="_top">IT Ruh Dnipro</a> та <a href="http://www.cleverfinger.com.au/user-guide/" target="_top">Yalantis</a></string>
+    <string name="days" formatted="false">%s days</string>
+    <array name="picture_urls">
+        <item>http://cs421717.vk.me/v421717191/64d6/QW0NU4gtvAo.jpg</item>
+        <item>http://cs412325.vk.me/v412325441/7e00/i5vPe5jkUVE.jpg</item>
+        <item>http://eskipaper.com/images/beautiful-pink-flowers-2.jpg</item>
+        <item>http://cs618423.vk.me/v618423676/b4e0/z85pFwWpttc.jpg</item>
+    </array>
+    <string name="sing_in">Login to account</string>
+    <string-array name="drawer_tabs">
+        <item>All issues</item>
+        <item>Issues on the map</item>
+    </string-array>
+</resources>

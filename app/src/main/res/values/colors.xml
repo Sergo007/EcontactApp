@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#6082b4</color>
+    <color name="primaryColorDark">#4a76a4</color>
+    <color name="accentColor">#FF73A620</color>
+    <color name="colorHighlight">#6082b4</color>
+
+    <color name="colorAccent">#f79900</color>
+    <color name="colorStatusTask">#f79900</color>
+    <color name="colorApp">#ccd8e6</color>
+    <color name="gray">#B0BEC5</color>
+    <color name="colorCapture">#808080</color>
+    <color name="colorHorizontalLine">#c2c2c2</color>
+    <color name="navigationColor">#000000</color>
+    <color name="colorTextPrimary">#000000</color>
+    <color name="colorSubTextSecondary">#727272</color>
+
+    <color name="horizontalLineColor">#dedede</color>
+</resources>

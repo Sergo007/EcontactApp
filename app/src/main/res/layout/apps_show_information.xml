@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@drawable/item_bg"
+    android:clickable="true">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_apps"
+        android:id="@+id/avatar_app"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name_apps"
+        android:id="@+id/name_apps"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/avatar_app"
+        android:layout_toEndOf="@+id/avatar_app"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ff000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="author"
+        android:id="@+id/name_author"
+        android:layout_below="@+id/name_apps"
+        android:layout_toRightOf="@+id/avatar_app"
+        android:layout_toEndOf="@+id/avatar_app"
+        android:layout_marginLeft="10dp"
+        android:textColor="#ff000000"
+        android:textSize="10dp" />
+
+    <RatingBar
+        android:layout_width="100dp"
+        android:layout_height="18dp"
+        android:id="@+id/rating_app"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_below="@+id/name_author"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:layout_toRightOf="@+id/avatar_app"
+        android:stepSize="0.1"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="price"
+        android:id="@+id/price"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FF73A620" />
+</RelativeLayout>

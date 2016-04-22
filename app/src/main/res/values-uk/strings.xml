@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="decree">УКАЗ № CE-1257218</string>
+    <string name="in_progress">В роботі</string>
+    <string name="title">Комунальне господарство</string>
+    <string name="created">Створено</string>
+    <string name="responsible">Відповідальний</string>
+    <string name="registered">Зареєстровано</string>
+    <string name="due_date">Вирішити до</string>
+    <string name="all_issues">Всі звернення</string>
+    <string name="responsible_info">Дніпропетровський МВК</string>
+    <string name="description">Відкритий люк (біля рекламного щита), район повороту 18 і 19 трамваїв на проспект Миру з Донецького шосе</string>
+    <string name="done_with_love">Зроблено з любов</string>
+    <string name="waiting">Очікує</string>
+    <string name="completed">Виконано</string>
+    <string name="sing_in">Увiйти в аккаунт</string>
+    <string-array name="drawer_tabs">
+        <item>Всi звернення</item>
+        <item>Звернення на мапi</item>
+    </string-array>
+</resources>

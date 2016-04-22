@@ -1,0 +1,41 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="height_item_linearlayout">50dp</dimen>
+    <dimen name="vertical_interval">10dp</dimen>
+    <dimen name="margin_number_task">10dp</dimen>
+    <dimen name="main_activity_recycler_height">155dp</dimen>
+    <dimen name="top_bottom_padding_linearlayout_activity">20dp</dimen>
+    <dimen name="left_right_padding_linearlayout_activity">15dp</dimen>
+    <dimen name="top_bottom_padding_status_task_activity">7dp</dimen>
+    <dimen name="left_right_padding_status_task_activity">15dp</dimen>
+    <dimen name="text_size">15dp</dimen>
+    <dimen name="margin_top_bottom_recycler_item">10dp</dimen>
+    <dimen name="margin_right_recycler_item">20dp</dimen>
+    <dimen name="width_drawer">300dp</dimen>
+    <dimen name="height_header_drawer">100dp</dimen>
+    <dimen name="text_size_title_drawer">25sp</dimen>
+    <dimen name="margin_left_text_size_title_drawer">18dp</dimen>
+    <dimen name="margin_left_text_top_title_drawer">45dp</dimen>
+    <dimen name="margin_left_text_in_item_drawer">20dp</dimen>
+    <dimen name="margin_left_icon_in_item_drawer">16dp</dimen>
+    <dimen name="margin_right_icon_in_item_drawer">16dp</dimen>
+    <dimen name="width_icon_in_item_drawer">30dp</dimen>
+    <dimen name="height_icon_in_item_drawer">30dp</dimen>
+    <dimen name="height_drawer_recycler_view">110dp</dimen>
+    <dimen name="margin_top_text_size_title_drawer">30dp</dimen>
+    <dimen name="corners_item">8dp</dimen>
+    <dimen name="null_dimens">0dp</dimen>
+    <dimen name="size_icon_category">40dp</dimen>
+    <dimen name="margin_icon_category">24dp</dimen>
+    <dimen name="margin_bottom_layout">16dp</dimen>
+    <dimen name="text_size_plus">18sp</dimen>
+    <dimen name="padding_left_plus">8dp</dimen>
+    <dimen name="height_title_item">36dp</dimen>
+    <dimen name="texst_size_title">16sp</dimen>
+    <dimen name="margin_days">8dp</dimen>
+    <dimen name="margin_animation_button">16dp</dimen>
+    <dimen name="button_scroll_threshold">4dp</dimen>
+</resources>
