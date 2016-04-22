@@ -1,4 +1,4 @@
-package sergey.ua.econtactapp.tabs;
+package sergey.ua.econtactapp.customviews;
 
 /*
  * Copyright 2014 Google Inc. All rights reserved.

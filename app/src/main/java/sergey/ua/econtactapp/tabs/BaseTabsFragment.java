@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import sergey.ua.econtactapp.AnimatedFloatingButton.AnimatedButton;
+import sergey.ua.econtactapp.customviews.CustomButton;
 import sergey.ua.econtactapp.R;
 import sergey.ua.econtactapp.RecyclerListViewAdapter;
 import sergey.ua.econtactapp.details.TaskDetailsActivity;
@@ -55,7 +55,7 @@ public class BaseTabsFragment extends Fragment {
     private RecyclerView mRecyclerViewInProgress;
     private RecyclerView mRecyclerViewCompleted;
     private ListView mListViewWarning;
-    private AnimatedButton mFaButton;
+    private CustomButton mFaButton;
 
     public static BaseTabsFragment getInstance(String position) {
         BaseTabsFragment myFragment = new BaseTabsFragment();
@@ -75,7 +75,7 @@ public class BaseTabsFragment extends Fragment {
             case StatesTask.IN_PROGRESS: {
                 RecyclerListViewAdapter adapterTrending = new RecyclerListViewAdapter(getActivity(), getFikeData());
                 layout = inflater.inflate(R.layout.fragment_in_progress, container, false);
-                mFaButton = (AnimatedButton) layout.findViewById(R.id.fab_button);
+                mFaButton = (CustomButton) layout.findViewById(R.id.fab_button);
                 mRecyclerViewInProgress = (RecyclerView) layout.findViewById(R.id.recycler_in_progress);
                 mFaButton.attachToRecyclerView(mRecyclerViewInProgress);
                 mRecyclerViewInProgress.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -86,7 +86,7 @@ public class BaseTabsFragment extends Fragment {
             }
             case StatesTask.WAITING: {
                 layout = inflater.inflate(R.layout.fragment_completed, container, false);
-                mFaButton = (AnimatedButton) layout.findViewById(R.id.fab_button);
+                mFaButton = (CustomButton) layout.findViewById(R.id.fab_button);
                 mListViewWarning = (ListView) layout.findViewById(R.id.task_listview);
                 mFaButton.attachToListView(mListViewWarning);
                 mListViewWarning.setAdapter(new ListViewTaskAdapter(getActivity(), getFikeData()));
@@ -105,7 +105,7 @@ public class BaseTabsFragment extends Fragment {
             case StatesTask.COMPLETED: {
                 RecyclerListViewAdapter adaptertopFree = new RecyclerListViewAdapter(getActivity(), getFikeData());
                 layout = inflater.inflate(R.layout.fragment_in_progress, container, false);
-                mFaButton = (AnimatedButton) layout.findViewById(R.id.fab_button);
+                mFaButton = (CustomButton) layout.findViewById(R.id.fab_button);
                 mRecyclerViewCompleted = (RecyclerView) layout.findViewById(R.id.recycler_in_progress);
                 mFaButton.attachToRecyclerView(mRecyclerViewCompleted);
                 mRecyclerViewCompleted.setLayoutManager(new LinearLayoutManager(getActivity()));

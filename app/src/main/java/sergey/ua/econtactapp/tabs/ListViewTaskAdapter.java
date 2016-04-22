@@ -38,7 +38,7 @@ import java.util.Date;
 import java.util.List;
 
 import sergey.ua.econtactapp.R;
-import sergey.ua.econtactapp.Utils.DateUtils;
+import sergey.ua.econtactapp.Utils.Utils;
 import sergey.ua.econtactapp.initilisator.ContextProvider;
 import sergey.ua.econtactapp.model.Task;
 
@@ -68,7 +68,7 @@ public class ListViewTaskAdapter extends ArrayAdapter<Task> {
         Date currentDate = Calendar.getInstance().getTime();
         holder.days.setText(
                 String.format(ContextProvider.getAppContext().getResources().getString(R.string.days),
-                        DateUtils.getDifferenceDays(currentDate, dueDate)));
+                        Utils.diffDays(currentDate, dueDate)));
         holder.plusCount.setText(Integer.toString(item.getPlusCount()));
 
         return (row);

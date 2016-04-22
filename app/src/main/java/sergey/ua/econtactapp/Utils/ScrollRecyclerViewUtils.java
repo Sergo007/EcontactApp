@@ -21,19 +21,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package sergey.ua.econtactapp.AnimatedFloatingButton;
+package sergey.ua.econtactapp.Utils;
 
 import android.support.v7.widget.RecyclerView;
 
 
-abstract class ScrollDetectorForRecyclerView extends RecyclerView.OnScrollListener {
+public abstract class ScrollRecyclerViewUtils extends RecyclerView.OnScrollListener {
     private int mScrollThreshold;
 
-    abstract void onScrollUp();
+    protected abstract void onScrollUp();
 
-    abstract void onScrollDown();
-
-    abstract void setScrollThreshold();
+    protected abstract void onScrollDown();
 
     @Override
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {

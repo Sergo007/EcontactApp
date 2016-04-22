@@ -41,7 +41,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-import sergey.ua.econtactapp.Utils.DateUtils;
+import sergey.ua.econtactapp.Utils.Utils;
 import sergey.ua.econtactapp.details.TaskDetailsActivity;
 import sergey.ua.econtactapp.initilisator.ContextProvider;
 import sergey.ua.econtactapp.model.Task;
@@ -81,7 +81,7 @@ public class RecyclerListViewAdapter extends RecyclerView.Adapter<RecyclerListVi
         Date currentDate = Calendar.getInstance().getTime();
         holder.days.setText(
                 String.format(ContextProvider.getAppContext().getResources().getString(R.string.days),
-                        DateUtils.getDifferenceDays(currentDate, dueDate)));
+                        Utils.diffDays(currentDate, dueDate)));
         holder.plusCount.setText(Integer.toString(current.getPlusCount()));
         holder.setItem(current);
     }

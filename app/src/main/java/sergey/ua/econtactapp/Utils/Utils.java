@@ -23,17 +23,14 @@
  */
 package sergey.ua.econtactapp.Utils;
 
-import android.content.Context;
-import android.graphics.drawable.Drawable;
-
-import sergey.ua.econtactapp.initilisator.ContextProvider;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 
-public class HelperDrawableUtils {
-
-    public static Drawable getDrawable(String name) {
-        Context context = ContextProvider.getAppContext();
-        int resourceId = context.getResources().getIdentifier(name, "drawable", context.getPackageName());
-        return context.getResources().getDrawable(resourceId);
+public class Utils {
+    public static long diffDays(Date Date1, Date Date2) {
+        long result = Date2.getTime() - Date1.getTime();
+        return TimeUnit.DAYS.convert(result, TimeUnit.MILLISECONDS);
     }
 }
+

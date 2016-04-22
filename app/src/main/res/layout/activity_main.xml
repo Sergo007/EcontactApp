@@ -16,7 +16,7 @@
             android:id="@+id/app_bar"
             layout="@layout/app_bar" />
 
-        <sergey.ua.econtactapp.tabs.SlidingTabLayout
+        <sergey.ua.econtactapp.customviews.SlidingTabLayout
             android:id="@+id/tabs"
             style="@style/CustomTabLayout"
             android:layout_width="match_parent"

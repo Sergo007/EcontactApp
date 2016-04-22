@@ -21,22 +21,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package sergey.ua.econtactapp.AnimatedFloatingButton;
+package sergey.ua.econtactapp.Utils;
 
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.AbsListView;
 
 
-abstract class ScrollDetectorForListView implements AbsListView.OnScrollListener {
+public abstract class ScrollListViewUtils implements AbsListView.OnScrollListener {
     private int mLastScrollY;
     private int mPreviousFirstVisibleItem;
     private AbsListView mListView;
     private int mScrollThreshold;
 
-    abstract void onScrollUp();
+    public abstract void onScrollUp();
 
-    abstract void onScrollDown();
+    protected abstract void onScrollDown();
 
     @Override
     public void onScrollStateChanged(AbsListView view, int scrollState) {

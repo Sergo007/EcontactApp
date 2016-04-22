@@ -35,7 +35,7 @@ import android.view.MenuItem;
 
 import sergey.ua.econtactapp.navigationdrawer.NavigationDrawerFragment;
 import sergey.ua.econtactapp.tabs.PagerAdapter;
-import sergey.ua.econtactapp.tabs.SlidingTabLayout;
+import sergey.ua.econtactapp.customviews.SlidingTabLayout;
 
 public class MainActivity extends ActionBarActivity {
     private Toolbar toolbar;
