@@ -47,5 +47,5 @@ public abstract class ScrollRecyclerViewUtils extends RecyclerView.OnScrollListe
 
     public void setScrollThreshold(int scrollThreshold) {
         mScrollThreshold = scrollThreshold;
-    }
+    } //[Comment] Unused
 }

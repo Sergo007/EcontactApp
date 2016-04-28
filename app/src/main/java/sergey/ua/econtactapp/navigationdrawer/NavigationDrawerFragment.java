@@ -44,7 +44,7 @@ import sergey.ua.econtactapp.R;
 import sergey.ua.econtactapp.initilisator.FontInitializer;
 import sergey.ua.econtactapp.model.Information;
 
-public class NavigationDrawerFragment extends Fragment {
+public class NavigationDrawerFragment extends Fragment { //[Comment] Use navigation view
 
     private RecyclerView recyclerView;
     public static final String PREF_FILE_NAME = "testpref";

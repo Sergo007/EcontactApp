@@ -51,7 +51,7 @@ import sergey.ua.econtactapp.initilisator.FontInitializer;
  * The views used as tabs can be customized by calling {@link #setCustomTabView(int, int)},
  * providing the layout ID of your custom layout.
  */
-public class SlidingTabLayout extends HorizontalScrollView {
+public class SlidingTabLayout extends HorizontalScrollView { //[Comment] Use tablayout
     /**
      * Allows complete control over the colors drawn in the tab layout. Set with
      * {@link #setCustomTabColorizer(TabColorizer)}.

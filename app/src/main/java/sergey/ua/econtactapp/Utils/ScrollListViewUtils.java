@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package sergey.ua.econtactapp.Utils;
+package sergey.ua.econtactapp.Utils; //[Comment] NEVER use upper-case in package names
 
 import android.support.annotation.NonNull;
 import android.view.View;

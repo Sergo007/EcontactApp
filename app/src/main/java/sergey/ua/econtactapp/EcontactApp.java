@@ -43,7 +43,7 @@ public class EcontactApp extends Application {
         mInitializer.add(new ImageLoaderInitializer());
         mInitializer.add(new FontInitializer());
         mInitializer.add(new ContextProvider());
-        for (AppInitializer initializer : this.mInitializer) {
+        for (AppInitializer initializer : this.mInitializer) { //[Comment] Unnecessary "this"
             initializer.initialize(this);
         }
     }

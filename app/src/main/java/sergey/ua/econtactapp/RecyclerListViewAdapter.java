@@ -54,7 +54,7 @@ public class RecyclerListViewAdapter extends RecyclerView.Adapter<RecyclerListVi
 
     public RecyclerListViewAdapter(Context context, List<Task> data) {
         mInflater = LayoutInflater.from(context);
-        this.mData = data;
+        this.mData = data; //[Comment] Unnecessary "this"
     }
 
     public void setLayoutInformationID(int layoutInformationID) {
@@ -98,7 +98,7 @@ public class RecyclerListViewAdapter extends RecyclerView.Adapter<RecyclerListVi
         TextView creteDate;
         TextView days;
         ImageView icon;
-        TextView plusCount;
+        TextView plusCount; //[Comment] Wrong names and visibility modifiers
 
         public ViewHolder(View row) {
             super(row);

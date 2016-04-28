@@ -90,7 +90,7 @@ public class RecyclerAdapterForNavDrawer extends RecyclerView.Adapter<RecyclerAd
 
         @Override
         public void onClick(View v) {
-            if (mClickListener != null) mClickListener.itemClick(v, getPosition());
+            if (mClickListener != null) mClickListener.itemClick(v, getPosition()); //[Comment] Deprecated
         }
     }
 

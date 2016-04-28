@@ -50,7 +50,7 @@ public class MainActivity extends ActionBarActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true); //[Comment] May reproduce NPE
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drover_layout), toolbar);
         syncDrowerIcon();
@@ -64,7 +64,7 @@ public class MainActivity extends ActionBarActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_menu));
+                toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_menu)); //[Comment] Deprecated
             }
         }, 100);
     }
