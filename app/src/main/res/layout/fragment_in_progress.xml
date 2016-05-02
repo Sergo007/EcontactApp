@@ -13,7 +13,7 @@
 
     </android.support.v7.widget.RecyclerView>
 
-    <sergey.ua.econtactapp.customviews.CustomButton
+    <yalantis.ua.econtactapp.customviews.CustomButton
         android:id="@+id/fab_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

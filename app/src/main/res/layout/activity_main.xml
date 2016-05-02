@@ -12,11 +12,12 @@
         tools:context="sergo.econtact.MainActivity"
         android:background="@color/primaryColor">
 
+
         <include
             android:id="@+id/app_bar"
             layout="@layout/app_bar" />
 
-        <sergey.ua.econtactapp.customviews.SlidingTabLayout
+        <yalantis.ua.econtactapp.customviews.SlidingTabLayout
             android:id="@+id/tabs"
             style="@style/CustomTabLayout"
             android:layout_width="match_parent"
@@ -39,13 +40,28 @@
 
     </LinearLayout>
 
-    <fragment
-        android:id="@+id/fragment_navigation_drawer"
-        android:name="sergey.ua.econtactapp.navigationdrawer.NavigationDrawerFragment"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/drawer_navigation_view"
         android:layout_width="@dimen/width_drawer"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:layout="@layout/fragment_navigation_drawer"
-        tools:layout="@layout/fragment_navigation_drawer" />
+        android:background="@android:color/white"
+        app:headerLayout="@layout/drawer_header"
+        app:itemTextColor="@android:color/black"
+        app:menu="@menu/menu_drawer">
+
+        <TextView
+            android:id="@+id/drawer_links"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:linksClickable="true"
+            android:paddingBottom="@dimen/padding_default"
+            android:paddingLeft="@dimen/padding_default"
+            android:paddingRight="@dimen/padding_default"
+            android:text="@string/links_string" />
+
+    </android.support.design.widget.NavigationView>
+
 </android.support.v4.widget.DrawerLayout>
 

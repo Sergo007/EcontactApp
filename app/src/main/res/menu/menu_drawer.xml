@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_actions"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_all"
+            android:icon="@drawable/ic_doc"
+            android:title="@string/all_issues" />
+        <item
+            android:id="@+id/drawer_map"
+            android:icon="@drawable/ic_map"
+            android:title="@string/issues_on_the_map" />
+    </group>
+
+    <group
+        android:id="@+id/menu_login"
+        android:checkableBehavior="none">
+        <item android:title="@string/sing_in" />
+    </group>
+</menu>

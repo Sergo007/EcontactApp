@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardView="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="126dp"
-    android:background="?android:attr/selectableItemBackground"
     android:layout_marginBottom="@dimen/corners_item"
+    android:background="?android:attr/selectableItemBackground"
     cardView:cardCornerRadius="@dimen/corners_item">
 
     <LinearLayout
@@ -28,29 +27,22 @@
                 android:layout_centerHorizontal="true"
                 android:layout_margin="@dimen/margin_icon_category" />
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/likes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/margin_bottom_layout"
-                android:orientation="horizontal">
+                android:drawableLeft="@drawable/ic_thumb_up"
+                android:drawablePadding="@dimen/likes_padding"
+                android:drawableStart="@drawable/ic_thumb_up"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_plus"
+                android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_thumb_up" />
-
-                <TextView
-                    android:id="@+id/plus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="@dimen/padding_left_plus"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/text_size_plus"
-                    tools:text="5" />
-
-            </LinearLayout>
         </RelativeLayout>
 
         <View style="@style/VerticalLine" />
@@ -89,7 +81,7 @@
                     android:layout_alignParentLeft="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="@color/colorSubTextSecondary"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/days"
