@@ -64,7 +64,7 @@ public class BaseTabsFragment extends Fragment {
         Bundle bundle = getArguments();
         switch (bundle.getString(KEY_TABS)) {
             case StatesTask.IN_PROGRESS: {
-                RecyclerListViewAdapter adapterTrending = new RecyclerListViewAdapter(getActivity(), getFikeData());
+                RecyclerListViewAdapter adapterTrending = new RecyclerListViewAdapter(getActivity(), getFakeData());
                 layout = inflater.inflate(R.layout.fragment_in_progress, container, false);
                 mFaButton = (CustomButton) layout.findViewById(R.id.fab_button);
                 mRecyclerViewInProgress = (RecyclerView) layout.findViewById(R.id.recycler_in_progress);
@@ -80,18 +80,18 @@ public class BaseTabsFragment extends Fragment {
                 mFaButton = (CustomButton) layout.findViewById(R.id.fab_button);
                 mListViewWarning = (ListView) layout.findViewById(R.id.task_listview);
                 mFaButton.attachToListView(mListViewWarning);
-                mListViewWarning.setAdapter(new ListViewTaskAdapter(getActivity(), getFikeData()));
+                mListViewWarning.setAdapter(new ListViewTaskAdapter(getActivity(), getFakeData()));
                 mListViewWarning.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        ActivityRouter.startTaskDetailsActivity(getFikeData().get(position));
+                        ActivityRouter.startTaskDetailsActivity(getFakeData().get(position));
                     }
                 });
 
                 break;
             }
             case StatesTask.COMPLETED: {
-                RecyclerListViewAdapter adaptertopFree = new RecyclerListViewAdapter(getActivity(), getFikeData());
+                RecyclerListViewAdapter adaptertopFree = new RecyclerListViewAdapter(getActivity(), getFakeData());
                 layout = inflater.inflate(R.layout.fragment_in_progress, container, false);
                 mFaButton = (CustomButton) layout.findViewById(R.id.fab_button);
                 mRecyclerViewCompleted = (RecyclerView) layout.findViewById(R.id.recycler_in_progress);
@@ -106,7 +106,7 @@ public class BaseTabsFragment extends Fragment {
         return layout;
     }
 
-    private List<Task> getFikeData() {
+    private List<Task> getFakeData() {
         List<Task> data = new ArrayList<>();
         Task task = new Task();
         task.setAddress("Гагарина 25");
