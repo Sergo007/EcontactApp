@@ -42,6 +42,7 @@ import java.util.Date;
 import java.util.List;
 
 import yalantis.ua.econtactapp.R;
+import yalantis.ua.econtactapp.utils.ActivityRouter;
 import yalantis.ua.econtactapp.utils.Utils;
 import yalantis.ua.econtactapp.details.TaskDetailsActivity;
 import yalantis.ua.econtactapp.initilisator.ContextProvider;
@@ -119,10 +120,7 @@ public class RecyclerListViewAdapter extends RecyclerView.Adapter<RecyclerListVi
 
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(ContextProvider.getAppContext(), TaskDetailsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.putExtra(TaskDetailsActivity.KEY_TASK, new Gson().toJson(mItem));
-            ContextProvider.getAppContext().startActivity(intent);
+            ActivityRouter.startTaskDetailsActivity(mItem);
         }
     }
 }

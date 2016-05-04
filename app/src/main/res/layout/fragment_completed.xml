@@ -8,7 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="@dimen/margin_days" />
+        android:dividerHeight="@dimen/margin_days"
+        android:paddingLeft="@dimen/margin_days"
+        android:paddingRight="@dimen/margin_days" />
 
     <yalantis.ua.econtactapp.customviews.CustomButton
         android:id="@+id/fab_button"

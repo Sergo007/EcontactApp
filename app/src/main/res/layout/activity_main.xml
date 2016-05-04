@@ -17,12 +17,14 @@
             android:id="@+id/app_bar"
             layout="@layout/app_bar" />
 
-        <yalantis.ua.econtactapp.customviews.SlidingTabLayout
+        <yalantis.ua.econtactapp.customviews.CustomTabLayout
             android:id="@+id/tabs"
             style="@style/CustomTabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/primaryColor"
+            android:layout_height="48dp"
+            android:elevation="6dp"
+            android:minHeight="?attr/actionBarSize"
+            app:tabTextColor="@color/gray"
             app:tabIndicatorColor="@android:color/white"
             android:paddingLeft="@dimen/margin_days"
             android:paddingRight="@dimen/margin_days" />
@@ -33,8 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:paddingLeft="@dimen/margin_days"
-            android:paddingRight="@dimen/margin_days"
             android:layout_marginTop="@dimen/margin_days" />
 
 

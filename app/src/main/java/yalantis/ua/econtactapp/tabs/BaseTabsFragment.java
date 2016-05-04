@@ -23,7 +23,6 @@
  */
 package yalantis.ua.econtactapp.tabs;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -34,16 +33,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import yalantis.ua.econtactapp.customviews.CustomButton;
 import yalantis.ua.econtactapp.R;
-import yalantis.ua.econtactapp.details.TaskDetailsActivity;
-import yalantis.ua.econtactapp.initilisator.ContextProvider;
 import yalantis.ua.econtactapp.model.StatesTask;
 import yalantis.ua.econtactapp.model.Task;
+import yalantis.ua.econtactapp.utils.ActivityRouter;
 
 
 public class BaseTabsFragment extends Fragment {
@@ -87,10 +84,7 @@ public class BaseTabsFragment extends Fragment {
                 mListViewWarning.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Intent intent = new Intent(ContextProvider.getAppContext(), TaskDetailsActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.putExtra(TaskDetailsActivity.KEY_TASK, new Gson().toJson(getFikeData().get(position)));
-                        ContextProvider.getAppContext().startActivity(intent);
+                        ActivityRouter.startTaskDetailsActivity(getFikeData().get(position));
                     }
                 });
 

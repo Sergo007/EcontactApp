@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="126dp"
     android:layout_marginBottom="@dimen/corners_item"
+    android:layout_marginLeft="@dimen/margin_days"
+    android:layout_marginRight="@dimen/margin_days"
     android:background="?android:attr/selectableItemBackground"
     cardView:cardCornerRadius="@dimen/corners_item">
 

@@ -23,10 +23,10 @@
  */
 package yalantis.ua.econtactapp;
 
-
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -36,11 +36,10 @@ import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import yalantis.ua.econtactapp.customviews.CustomTabLayout;
 import yalantis.ua.econtactapp.tabs.PagerAdapter;
-import yalantis.ua.econtactapp.customviews.SlidingTabLayout;
 
 public class MainActivity extends ActionBarActivity {
     @Bind(R.id.drover_layout)
@@ -54,7 +53,7 @@ public class MainActivity extends ActionBarActivity {
     @Bind(R.id.pager)
     ViewPager pager;
     @Bind(R.id.tabs)
-    SlidingTabLayout tabs;//TODO add TabLayout
+    CustomTabLayout tabs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +63,33 @@ public class MainActivity extends ActionBarActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         initToolbar();
         initNavigationDrawer();
-        pager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
-        tabs.setDistributeEvenly(true);
-        tabs.setViewPager(pager);
+        setupTab();
+    }
+
+    private void setupTab() {
+        final PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
+        tabs.setTabsFromPagerAdapter(pagerAdapter);
+
+        tabs.getTabAt(0).setText(R.string.in_progress);
+        tabs.getTabAt(1).setText(R.string.completed);
+        tabs.getTabAt(2).setText(R.string.waiting);
+
+        tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                pager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
+        pager.setAdapter(pagerAdapter);
+        pager.addOnPageChangeListener(new CustomTabLayout.TabLayoutOnPageChangeListener(tabs));
     }
 
     private void initToolbar() {
@@ -83,15 +106,8 @@ public class MainActivity extends ActionBarActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-                if (item.getItemId() == R.id.drawer_map) {
-                    item.setChecked(false);
-                    drawerLayout.closeDrawers();
-                    return true;
-                } else {
-                    item.setChecked(true);
-                    drawerLayout.closeDrawers();
-                    return true;
-                }
+                drawerLayout.closeDrawers();
+                return true;
             }
         });
     }
